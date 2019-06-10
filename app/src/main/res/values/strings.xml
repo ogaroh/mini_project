@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">COMP 496</string>
-    <string name="enter_word">Enter Word</string>
-    <string name="translate">Translate</string>
+    <string name="app_name">SWAHILI TRANSLATOR</string>
+    <string name="enter_word">English Word:</string>
+    <string name="translate">TRANSLATE</string>
     <string name="exit">EXIT</string>
+    <string name="swahili_translations">Available Swahili Translations:</string>
 </resources>

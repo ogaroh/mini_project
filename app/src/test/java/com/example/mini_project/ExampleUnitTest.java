@@ -1,4 +1,4 @@
-package com.example.comp496;
+package com.example.mini_project;
 
 import org.junit.Test;
 

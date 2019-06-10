@@ -1,4 +1,9 @@
-package com.example.comp496;
+
+/*
+ * Copyright (c) 2019, Erick Ogaro.
+ */
+
+package com.example.mini_project;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.comp496.Adapter.Translations_Adapter;
+import com.example.mini_project.translator.Translator;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     Button button_translate;
     Button button_exit;
     RecyclerView recyclerView;
-    Translations_Adapter translations_adapter;
+    Translator translator;
     List<String> wordList;
 
     @Override
@@ -56,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 List<String> listOfWords = Translate(fromEnglish);
-                translations_adapter.addList(listOfWords);
+                translator.addList(listOfWords);
             }
         });
     }
@@ -64,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         String line;
         List<String> wordList = new ArrayList<>();
         try {
-            InputStream inputStream = getAssets().open("db.csv");
+            InputStream inputStream = getAssets().open("database.csv");
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
@@ -83,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        translations_adapter = new Translations_Adapter(this,wordList);
-        recyclerView.setAdapter(translations_adapter);
+        translator = new Translator(this,wordList);
+        recyclerView.setAdapter(translator);
         return wordList;
     }
 }

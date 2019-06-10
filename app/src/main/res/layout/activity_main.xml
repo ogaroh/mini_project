@@ -18,14 +18,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter English Word"
+            android:text="@string/enter_word"
             android:textSize="@dimen/text_size"
             android:textStyle="bold"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/word"
-            android:textSize="25sp"
+            android:textSize="@dimen/text_size"
             android:layout_marginLeft="20dp"
             />
     </LinearLayout>
@@ -57,13 +57,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TRANSLATIONS"
+        android:text="@string/swahili_translations"
         android:layout_below="@id/l2"
         android:layout_marginBottom="20dp"
         android:id="@+id/tv"
-        android:textSize="25sp"
+        android:textSize="@dimen/text_size"
         android:textAlignment="center"
-        android:textColor="#111" />
+        android:textColor="@color/textColor"
+        tools:ignore="HardcodedText" />
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

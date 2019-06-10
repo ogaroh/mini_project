@@ -1,4 +1,8 @@
-package com.example.comp496.Adapter;
+/*
+ * Copyright (c) 2019, Erick Ogaro.
+ */
+
+package com.example.mini_project.translator;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,17 +13,17 @@ import android.widget.TextView;
 
 import android.support.v7.widget.RecyclerView;
 
-import com.example.comp496.R;
+import com.example.mini_project.R;
 
 import java.util.List;
 
 
-public class Translations_Adapter extends RecyclerView.Adapter<Translations_Adapter.ViewHolder>
+public class Translator extends RecyclerView.Adapter<Translator.ViewHolder>
 {
     private Context context;
     private List<String> word_list;
 
-    public Translations_Adapter(Context context, List<String> word_list)
+    public Translator(Context context, List<String> word_list)
     {
         this.context = context;
         this.word_list = word_list;
@@ -28,7 +32,7 @@ public class Translations_Adapter extends RecyclerView.Adapter<Translations_Adap
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewtype)
     {
-        View view = LayoutInflater.from(context).inflate(R.layout.words_item, viewGroup, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.translations, viewGroup, false);
 
         return new ViewHolder(view);
     }
