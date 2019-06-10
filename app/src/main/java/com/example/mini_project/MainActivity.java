@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.mini_project.translator.Translator;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -56,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String fromEnglish = word_to_translate.getText().toString();
-                if (TextUtils.isEmpty(fromEnglish)){
-                    Toast.makeText(MainActivity.this,"Please enter a word",Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(fromEnglish)) {
+                    Toast.makeText(MainActivity.this, "Please enter a word", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 List<String> listOfWords = Translate(fromEnglish);
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     private List<String> Translate(String word) {
         String line;
         List<String> wordList = new ArrayList<>();
@@ -88,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        translator = new Translator(this,wordList);
+        translator = new Translator(this, wordList);
         recyclerView.setAdapter(translator);
         return wordList;
     }
