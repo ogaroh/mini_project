@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SWAHILI TRANSLATOR</string>
+    <string name="app_name">Word LookUp</string>
     <string name="enter_word">English Word:</string>
     <string name="translate">TRANSLATE</string>
     <string name="exit">EXIT</string>
