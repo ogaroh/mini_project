@@ -2,6 +2,7 @@
  * Copyright (c) 2019, Erick Ogaro.
  */
 
+
 package com.example.mini_project.translator;
 
 import android.content.Context;
